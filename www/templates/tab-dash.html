@@ -1,0 +1,20 @@
+<ion-view view-title="Anasayfa">
+  <ion-content class="padding">
+      <div class="list card" ng-repeat="video in videos">
+          <div class="item item-text-wrap">
+              <h2 ng-click="playVideo(video)">{{video.title}}</h2>
+                <p><i class="ion ion-ios-calendar-outline"></i> {{video.date | limitTo: 10}}</p>
+          </div>
+          <div class="item item-body">
+              <img class="full-image" ng-src="{{video.thumbnails}}" alt="{{video.title}}">
+              <p>
+                  {{video.content | limitTo:33 }}
+              </p>
+              <p>
+                <a href="#" class="subdued">{{video.likeCount}} Like</a>
+                <a href="#" class="subdued">{{video.commentCount}} Comments</a>
+            </p>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>
