@@ -50,4 +50,8 @@ angular.module('vidioner.services', [])
       return null;
     }
   };
-});
+})
+
+.service("UserService", function () {
+
+})
